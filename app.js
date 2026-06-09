@@ -8,6 +8,8 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const otpRoutes = require("./routes/otpRoutes");
 const passwordRoutes = require("./routes/passwordRoutes");
+const vendorRoutes = require( "./routes/vendorRoutes");
+const vendorOnlineRoutes =require("./routes/vendorOnlineRoutes");
 
 const apiKeyMiddleware = require("./middleware/apiKeyMiddleware");
 const errorMiddleware = require("./middleware/errorMiddleware");
@@ -28,6 +30,9 @@ app.use(apiKeyMiddleware);
 app.use("/api/auth", authRoutes);
 app.use("/api/otp", otpRoutes);
 app.use("/api/password", passwordRoutes);
+app.use("/api/vendor",vendorRoutes);
+
+app.use("/api/vendor",vendorOnlineRoutes);
 
 // Error Handler (must be last)
 app.use(errorMiddleware);
