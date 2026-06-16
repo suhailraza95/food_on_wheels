@@ -1,54 +1,83 @@
 const ajvInstance = require("../../config/ajv-Instance");
 
-const signupREQSchema = {
-  type: "object",
+const createCustomerREQSchema = {
+    type: "object",
 
-  properties: {
+    properties: {
 
-    email: {
-      type: "string",
-      format: "email"
+        userId: {
+            type: "string"
+        },
+
+        dpUrl: {
+            type: "string"
+        },
+
+        firstName: {
+            type: "string",
+            minLength: 2
+        },
+
+        lastName: {
+            type: "string",
+            minLength: 2
+        },
+
+        mobile: {
+            type: "string",
+            minLength: 10,
+            maxLength: 15
+        },
+
+        latitude: {
+            type: "number"
+        },
+
+        longitude: {
+            type: "number"
+        },
+
+        city: {
+            type: "string",
+            minLength: 2
+        },
+
+        state: {
+            type: "string",
+            minLength: 2
+        },
+
+        privacyPolicyConsent: {
+            type: "boolean"
+        },
+
+        marketingConsent: {
+            type: "boolean"
+        },
+
+        termsOfServiceConsent: {
+            type: "boolean"
+        }
     },
 
-    password: {
-      type: "string",
-      minLength: 8
-    },
+    required: [
+        "userId",
+        "firstName",
+        "lastName",
+        "mobile",
+        "latitude",
+        "longitude",
+        "city",
+        "state",
+        "privacyPolicyConsent",
+        "marketingConsent",
+        "termsOfServiceConsent"
+    ],
 
-    accountType: {
-      type: "string",
-      enum: ["user", "vendor"]
-    },
-
-    privacyPolicyConsent: {
-      type: "boolean"
-    },
-
-    termsOfServiceConsent: {
-      type: "boolean"
-    },
-
-    marketingConsent: {
-      type: "boolean"
-    },
-
-    aiProcessingConsent: {
-      type: "boolean"
-    }
-
-  },
-
-  required: [
-    "email",
-    "password",
-    "accountType",
-    "privacyPolicyConsent",
-    "termsOfServiceConsent",
-    "marketingConsent",
-    "aiProcessingConsent"
-  ],
-
-  additionalProperties: false
+    additionalProperties: false
 };
 
-module.exports = ajvInstance.compile(signupREQSchema);
+module.exports =
+    ajvInstance.compile(
+        createCustomerREQSchema
+    );
