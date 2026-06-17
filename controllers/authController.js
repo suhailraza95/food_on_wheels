@@ -148,7 +148,7 @@ if (!aiProcessingConsent) {
       Date.now() + 10 * 60 * 1000
     ),
   });
-//console.log("otp: ", otp);
+console.log("otp: ", otp);
   await sendOtpEmail(
     user.email,
     otp

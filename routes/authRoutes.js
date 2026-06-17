@@ -9,7 +9,7 @@ const {
 } = require("../controllers/authController");
 
 
-const signupUserREQSchema = require("../schema/request-schema/create-customer-schema")
+const signupUserREQSchema = require("../schema/request-schema/create-user-schema")
 const validateDto = require("../middleware/validate-dto")
 const loginUserREQSchema = require("../schema/request-schema/login-user-schema")
 const refreshTokenREQSchema = require("../schema/request-schema/refresh-token-schema")
