@@ -5,9 +5,6 @@ const createVendorREQSchema = {
 
     properties: {
 
-        userId: {
-            type: "string"
-        },
 
         firstName: {
             type: "string",
@@ -59,7 +56,6 @@ const createVendorREQSchema = {
     },
 
     required: [
-        "userId",
         "firstName",
         "lastName",
         "mobile",

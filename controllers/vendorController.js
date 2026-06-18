@@ -8,8 +8,9 @@ const Review = require("../models/reviewModel");
 const createVendor = asyncHandler(
 async (req, res) => {
 
+
+    const userId = req.user.id;
     const {
-        userId,
         firstName,
         lastName,
         mobile,

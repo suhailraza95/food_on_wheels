@@ -5,9 +5,6 @@ const createCustomerREQSchema = {
 
     properties: {
 
-        userId: {
-            type: "string"
-        },
 
         dpUrl: {
             type: "string"
@@ -61,7 +58,6 @@ const createCustomerREQSchema = {
     },
 
     required: [
-        "userId",
         "firstName",
         "lastName",
         "mobile",

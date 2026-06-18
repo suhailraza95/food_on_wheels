@@ -6,8 +6,9 @@ const Customer = require("../models/customerModel");
 const createCustomer = asyncHandler(
 async (req, res) => {
 
+    const userId = req.user.id;
+
     const {
-        userId,
         dpUrl,
         firstName,
         lastName,

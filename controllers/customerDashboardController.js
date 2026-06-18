@@ -45,8 +45,8 @@ const calculateDistance = (
 
 const getDashboard = asyncHandler(
 async (req, res) => {
-
-    const { userId } = req.params;
+///
+    const userId = req.user.id;
 
     const customer =
         await Customer.findOne({
