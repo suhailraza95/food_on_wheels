@@ -7,9 +7,10 @@ const Review = require("../models/reviewModel");
 const addReview = asyncHandler(
 async (req, res) => {
 
+    const userId = req.user.id;
+
     const {
         vendorId,
-        customerId,
         stars,
         comment
     } = req.body;
@@ -25,19 +26,21 @@ async (req, res) => {
     }
 
     const customer =
-        await Customer.findById(customerId);
+        await Customer.findOne({
+            userId
+        });
 
     if (!customer) {
         res.status(404);
         throw new Error(
-            "Customer not found"
+            "Customer profile not found"
         );
     }
 
     const review =
         await Review.create({
             vendorId,
-            customerId,
+            customerId: customer._id,
             stars,
             comment
         });

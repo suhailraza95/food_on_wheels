@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const protect = require("../middleware/authMiddleware");
 
 const {
     createVendor,getVendorDetails
@@ -10,12 +11,14 @@ const vendorformREQSchema = require("../schema/request-schema/vendor-form-schema
 
 router.post(
     "/profile",
+    protect,
     validateDto(vendorformREQSchema),
     createVendor
 );
 
 router.get(
     "/:vendorId",
+    protect,
     getVendorDetails
 );
 

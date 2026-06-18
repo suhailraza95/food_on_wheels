@@ -1,0 +1,567 @@
+{
+  "info": {
+    "_postman_id": "485cd463-ac55-48cd-abcf-bb27d86b2707",
+    "name": "food-on-wheels",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54144313",
+    "_collection_link": "https://go.postman.co/collection/54144313-485cd463-ac55-48cd-abcf-bb27d86b2707?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "System",
+      "item": [
+        {
+          "name": "health",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"PUT_USER_ID_HERE\",\n  \"dpUrl\": \"https://cdn.app.com/profile.jpg\",\n  \"firstName\": \"Suhail\",\n  \"lastName\": \"Raza\",\n  \"mobile\": \"9876543210\",\n  \"latitude\": 19.076,\n  \"longitude\": 72.877,\n  \"city\": \"Jagdalpur\",\n  \"state\": \"Chhattisgarh\",\n  \"privacyPolicyConsent\": true,\n  \"marketingConsent\": false,\n  \"termsOfServiceConsent\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/customer/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "customer",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Signup",
+      "item": [
+        {
+          "name": "signUp",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"suhailhome96@gmail.com\",\n  \"password\": \"Password@123\",\n  \"accountType\": \"user\",\n  \"privacyPolicyConsent\": true,\n  \"termsOfServiceConsent\": true,\n  \"marketingConsent\": false,\n  \"aiProcessingConsent\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/auth/signup",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Verify OTP",
+      "item": [
+        {
+          "name": "verifyOTP",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"suhailhome96@gmail.com\",\n  \"otp\": \"123456\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/otp/verify",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "otp",
+                "verify"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"suhailhome96@gmail.com\",\n  \"password\": \"Password@123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refreshToken\": \"PASTE_REFRESH_TOKEN_HERE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/auth/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refresh-token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refreshToken\": \"PASTE_REFRESH_TOKEN_HERE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/auth/refresh-token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "auth",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vendor",
+      "item": [
+        {
+          "name": "vendor form",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"6a280740a4de38fcd466876e\",\n  \"firstName\": \"Suhail\",\n  \"lastName\": \"Raza\",\n  \"mobile\": \"9876543210\",\n  \"businessName\": \"Food On Wheels\",\n  \"city\": \"Jagdalpur\",\n  \"state\": \"Chhattisgarh\",\n  \"category\": \"Food Truck\",\n  \"privacyPolicyConsent\": true,\n  \"marketingConsent\": false,\n  \"termsOfServiceConsent\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/vendor/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "vendor",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "vendor go online",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"6a280767a4de38fcd4668770\",\n  \"latitude\": 19.0760,\n  \"longitude\": 72.8777,\n  \"openTime\": \"09:00\",\n  \"closeTime\": \"22:00\",\n  \"status\": \"online\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/vendor/go-online",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "vendor",
+                "go-online"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "vendor details",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"PUT_USER_ID_HERE\",\n  \"dpUrl\": \"https://cdn.app.com/profile.jpg\",\n  \"firstName\": \"Suhail\",\n  \"lastName\": \"Raza\",\n  \"mobile\": \"9876543210\",\n  \"latitude\": 19.076,\n  \"longitude\": 72.877,\n  \"city\": \"Jagdalpur\",\n  \"state\": \"Chhattisgarh\",\n  \"privacyPolicyConsent\": true,\n  \"marketingConsent\": false,\n  \"termsOfServiceConsent\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/vendor/6a2f90aa4d9e6b732903e73f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "vendor",
+                "6a2f90aa4d9e6b732903e73f"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Customer",
+      "item": [
+        {
+          "name": "customer form",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"PUT_USER_ID_HERE\",\n  \"dpUrl\": \"https://cdn.app.com/profile.jpg\",\n  \"firstName\": \"Suhail\",\n  \"lastName\": \"Raza\",\n  \"mobile\": \"9876543210\",\n  \"latitude\": 19.076,\n  \"longitude\": 72.877,\n  \"city\": \"Jagdalpur\",\n  \"state\": \"Chhattisgarh\",\n  \"privacyPolicyConsent\": true,\n  \"marketingConsent\": false,\n  \"termsOfServiceConsent\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/customer/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "customer",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "customer dashboard",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmY4NTY2YjhlZTJlN2U5MjJjMmE4NCIsImlhdCI6MTc4MTYxMTMzNSwiZXhwIjoxNzgxNjEyMjM1fQ.obAP7Bipree9vrDGSzc3BPSPNCVaC8UOLt7IAsqHvdQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/customer/dashboard/6a2f8566b8ee2e7e922c2a84",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "customer",
+                "dashboard",
+                "6a2f8566b8ee2e7e922c2a84"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reviews",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"PUT_USER_ID_HERE\",\n  \"dpUrl\": \"https://cdn.app.com/profile.jpg\",\n  \"firstName\": \"Suhail\",\n  \"lastName\": \"Raza\",\n  \"mobile\": \"9876543210\",\n  \"latitude\": 19.076,\n  \"longitude\": 72.877,\n  \"city\": \"Jagdalpur\",\n  \"state\": \"Chhattisgarh\",\n  \"privacyPolicyConsent\": true,\n  \"marketingConsent\": false,\n  \"termsOfServiceConsent\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/customer/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "customer",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reset Password",
+      "item": [
+        {
+          "name": "forgot-password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"suhailhome96@gmail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/password/forgot-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "password",
+                "forgot-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reset-password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "sk_live_CUFEU9Gzio4nhzZSogZdrZZAiOXKGyF2",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"suhailhome96@gmail.com\",\n   \"otp\": \"123456\",\n  \"newPassword\": \"NewPassword@123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5004/api/password/reset-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5004",
+              "path": [
+                "api",
+                "password",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

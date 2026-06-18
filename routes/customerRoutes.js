@@ -1,4 +1,5 @@
 const express = require("express");
+const protect = require("../middleware/authMiddleware");
 
 const {
     createCustomer
@@ -9,6 +10,7 @@ const createCustomerREQSchema = require("../schema/request-schema/create-custome
 const router = express.Router();
 
 router.post("/profile",
+    protect,
     validateDto(createCustomerREQSchema),
     createCustomer);
 
